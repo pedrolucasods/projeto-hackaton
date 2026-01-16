@@ -1,0 +1,46 @@
+{
+  "name": "projeto-podacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npm run build:css:minify",
+    "build:css:minify": "node scripts/minify-css.js",
+    "build:js": "npm run build:js:minify",
+    "build:js:minify": "node scripts/minify-js.js",
+    "build": "npm run build:css && npm run build:js",
+    "build:watch": "npm run build && chokidar 'src/frontend/public/css/**/*.css' 'src/frontend/public/javascript/**/*.js' -c 'npm run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrolucasods/Projeto-PodAcao.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrolucasods/Projeto-PodAcao/issues"
+  },
+  "homepage": "https://github.com/pedrolucasods/Projeto-PodAcao#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.3",
+    "express-session": "^1.18.2",
+    "hbs": "^4.2.0",
+    "multer": "^2.0.2",
+    "mysql2": "^3.16.0",
+    "nodemon": "^3.1.11",
+    "path": "^0.12.7",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "terser": "^5.24.0"
+  }
+}
