@@ -108,9 +108,9 @@ function startServer(port = 3000) {
     console.log('erro : '+erro)
   })
 
-  db.sync({force:true}).then(function(){
-    console.log('Table adicionada!')     //Criação de tabelas
-  })
+  // db.sync({force:true}).then(function(){
+  //   console.log('Table adicionada!')     //Criação de tabelas
+  // })
 
 
   return new Promise((resolve, reject) => {
