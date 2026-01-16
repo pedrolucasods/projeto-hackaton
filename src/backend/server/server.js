@@ -95,9 +95,13 @@ app.use(express.static(path.join(__dirname,'../../frontend/public'), staticOptio
 const RotaPaciente = require('../routes/paciente')
 app.use('/paciente', RotaPaciente)
 
+const RotaConsulta = require('../routes/consulta')
+app.use('/consulta', RotaConsulta)
+
 // home
 const homeroute = require('../routes/homepage')
 app.use('/',homeroute)
+
 
 
 function startServer(port = 3000) {
