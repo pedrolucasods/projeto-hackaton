@@ -6,10 +6,10 @@ const ControllerPaciente = require('../controllers/paciente')
 router.get('/', ControllerPaciente.lista)
 
 // rota formulario cadastrar paciente
-router.get('/cadastrarPaciente', ControllerPaciente.formCadastrar)
+router.get('/cadastrar', ControllerPaciente.formCadastrar)
 
 // rota cadastrar no banco
-router.post('/cadastrarPaciente', ControllerPaciente.cadastrar)
+router.post('/cadastrar', ControllerPaciente.cadastrar)
 
 // rota detalhes paciente
 router.get('/detalhes/:id', ControllerPaciente.detalhes)
