@@ -7,7 +7,7 @@ const Paciente = db.define('paciente',{
         allowNull: false
     },
     data_nascimento:{
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: false
     },
     nome_mae:{

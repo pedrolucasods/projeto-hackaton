@@ -37,7 +37,7 @@ class Paciente{
     async cadastrar(req,res){
         try {
             let nome = req.body.nome
-            let data_nascimento = req.body.data_nacimento
+            let data_nascimento = req.body.data_nascimento
             let nome_mae = req.body.nome_mae
             let cartao_sus = req.body.cartao_sus
             let cpf = req.body.cpf
@@ -45,7 +45,7 @@ class Paciente{
 
             await modelPaciente.create({
                 nome: nome,
-                data_nacimento: data_nascimento,
+                data_nascimento: data_nascimento,
                 nome_mae: nome_mae,
                 cartao_sus: cartao_sus,
                 cpf: cpf,
