@@ -16,7 +16,7 @@ const Perguntas = db.define('perguntas',{
         type: DataTypes.TEXT,
         allowNull: false
     },
-    reposta:{
+    resposta:{
         type: DataTypes.TEXT,
         allowNull: false
     }

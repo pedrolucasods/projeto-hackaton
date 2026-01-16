@@ -5,7 +5,7 @@ require('dotenv').config()
 const db = new Sequelize(
     'sistema_enfermagem',
     'root',
-    'pedro06',
+    'VoucherDev@2024',
     {
         host: 'localhost',
         port: 3306,
