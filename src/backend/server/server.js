@@ -92,6 +92,8 @@ app.use(express.static(path.join(__dirname,'../../frontend/public'), staticOptio
 
 
 // Rotas
+const RotaPaciente = require('../routes/paciente')
+app.use('paciente', RotaPaciente)
 
 // home
 const homeroute = require('../routes/homepage')
