@@ -93,7 +93,7 @@ app.use(express.static(path.join(__dirname,'../../frontend/public'), staticOptio
 
 // Rotas
 const RotaPaciente = require('../routes/paciente')
-app.use('paciente', RotaPaciente)
+app.use('/paciente', RotaPaciente)
 
 // home
 const homeroute = require('../routes/homepage')
@@ -108,9 +108,9 @@ function startServer(port = 3000) {
     console.log('erro : '+erro)
   })
 
-  // db.sync({force:true}).then(function(){
-  //   console.log('Table adicionada!')     //Criação de tabelas
-  // })
+  db.sync({force:true}).then(function(){
+    console.log('Table adicionada!')     //Criação de tabelas
+  })
 
 
   return new Promise((resolve, reject) => {

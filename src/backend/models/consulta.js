@@ -7,7 +7,7 @@ const Consulta = db.define('consulta',{
         type: DataTypes.INTEGER,
         allowNull: false,
         references:{
-            model: Paciente,
+            model: 'pacientes',
             key: 'id'
         },
         onDelete:'CASCADE'
