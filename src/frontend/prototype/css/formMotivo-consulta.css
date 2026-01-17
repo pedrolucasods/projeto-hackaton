@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #d4f3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 22px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.titulo {
+    font-size: 28px;
+    color: #0077b6;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.sintomas{
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+
+}
+
+.subtitulo {
+    font-size: 22px;
+    color: #005f73;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.formulario,
+.sintomas {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.btn,
+.botao,
+.container > button {
+    background-color: #6fb2ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn:hover,
+.botao:hover,
+.container > button:hover {
+    background-color: #6fb2ff;
+}
+
+.salvar{
+    background-color: #6fb2ff;
+    color: #ffffff;
+    border: #ffffff;
+    border-radius: 5px;
+}
+
+
