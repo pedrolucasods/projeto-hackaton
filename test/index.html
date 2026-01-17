@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinais Vitais</title>
+  <style>
+    .resultado {
+      font-weight: bold;
+      color: #333;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Cadastro de Sinais Vitais</h2>
+  <form id="formSinais">
+    <label>Peso (kg):</label>
+    <input type="number" id="peso" step="0.1">
+    <div id="resultadoImc" class="resultado"></div><br>
+
+    <label>Altura (m):</label>
+    <input type="number" id="altura" step="0.01"><br><br>
+
+    <label>Glicemia (mg/dL):</label>
+    <input type="number" id="glicemia">
+    <div id="resultadoGlicemia" class="resultado"></div><br>
+
+    <label>Pressão Arterial:</label><br>
+    Sistólica <input type="number" id="pressaoSis"> 
+    Diastólica <input type="number" id="pressaoDia">
+    <div id="resultadoPressao" class="resultado"></div><br>
+
+    <label>Temperatura Axilar (°C):</label>
+    <input type="number" id="tax" step="0.1">
+    <div id="resultadoTax" class="resultado"></div><br>
+
+    <label>Frequência Cardíaca (bpm):</label>
+    <input type="number" id="fc">
+    <div id="resultadoFc" class="resultado"></div><br>
+  </form>
+
+  <script>
+    function avaliar() {
+      const peso = parseFloat(document.getElementById('peso').value);
+      const altura = parseFloat(document.getElementById('altura').value);
+      const glicemia = parseFloat(document.getElementById('glicemia').value);
+      const pressaoSis = parseFloat(document.getElementById('pressaoSis').value);
+      const pressaoDia = parseFloat(document.getElementById('pressaoDia').value);
+      const tax = parseFloat(document.getElementById('tax').value);
+      const fc = parseFloat(document.getElementById('fc').value);
+
+      // IMC
+      if (peso && altura) {
+        const imc = (peso / (altura * altura)).toFixed(2);
+        let resultadoImc = '';
+        if (imc < 18.5) resultadoImc = 'Baixo peso';
+        else if (imc < 25) resultadoImc = 'Normal';
+        else if (imc < 30) resultadoImc = 'Sobrepeso';
+        else resultadoImc = 'Obesidade';
+        document.getElementById('resultadoImc').textContent = `IMC: ${imc} (${resultadoImc})`;
+      }
+
+      // Glicemia
+      if (glicemia) {
+        let resultadoGlicemia = '';
+        if (glicemia < 70) resultadoGlicemia = 'Hipoglicemia';
+        else if (glicemia <= 99) resultadoGlicemia = 'Normal';
+        else resultadoGlicemia = 'Alterada';
+        document.getElementById('resultadoGlicemia').textContent = `Glicemia: ${glicemia} (${resultadoGlicemia})`;
+      }
+
+      // Pressão arterial
+      if (pressaoSis && pressaoDia) {
+        let resultadoPressao = '';
+        if (pressaoSis < 120 && pressaoDia < 80) resultadoPressao = 'Normal';
+        else if (pressaoSis < 140 && pressaoDia < 90) resultadoPressao = 'Pré-hipertensão';
+        else resultadoPressao = 'Hipertensão';
+        document.getElementById('resultadoPressao').textContent = `Pressão: ${pressaoSis}/${pressaoDia} mmHg (${resultadoPressao})`;
+      }
+
+      // Temperatura
+      if (tax) {
+        let resultadoTax = '';
+        if (tax < 36) resultadoTax = 'Hipotermia';
+        else if (tax <= 37.2) resultadoTax = 'Normal';
+        else resultadoTax = 'Febre';
+        document.getElementById('resultadoTax').textContent = `Temperatura: ${tax} °C (${resultadoTax})`;
+      }
+
+      // Frequência cardíaca
+      if (fc) {
+        let resultadoFc = '';
+        if (fc < 60) resultadoFc = 'Bradicardia';
+        else if (fc <= 100) resultadoFc = 'Normal';
+        else resultadoFc = 'Taquicardia';
+        document.getElementById('resultadoFc').textContent = `FC: ${fc} bpm (${resultadoFc})`;
+      }
+    }
+
+    // listeners em todos os inputs
+    document.querySelectorAll('#formSinais input').forEach(input => {
+      input.addEventListener('input', avaliar);
+    });
+  </script>
+</body>
+</html>

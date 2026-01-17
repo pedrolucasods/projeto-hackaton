@@ -1,13 +1,13 @@
 const {DataTypes} = require('sequelize')
 const db = require('../db/database')
-const Consulta = require('./consulta')
+const Consulta = require('./consulta.js')
 
 const Perguntas = db.define('perguntas',{
     id_consulta:{
         type: DataTypes.INTEGER,
         allowNull: false,
         references:{
-            model: Consulta,
+            model:'consulta',
             key:'id'
         },
         onDelete:'CASCADE'
@@ -16,8 +16,10 @@ const Perguntas = db.define('perguntas',{
         type: DataTypes.TEXT,
         allowNull: false
     },
-    reposta:{
+    resposta:{
         type: DataTypes.TEXT,
         allowNull: false
     }
 })
+
+module.exports = Perguntas

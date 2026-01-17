@@ -37,7 +37,7 @@ class Paciente{
     async cadastrar(req,res){
         try {
             let nome = req.body.nome
-            let data_nacimento = req.body.data_nacimento
+            let data_nascimento = req.body.data_nascimento
             let nome_mae = req.body.nome_mae
             let cartao_sus = req.body.cartao_sus
             let cpf = req.body.cpf
@@ -45,7 +45,7 @@ class Paciente{
 
             await modelPaciente.create({
                 nome: nome,
-                data_nacimento: data_nacimento,
+                data_nascimento: data_nascimento,
                 nome_mae: nome_mae,
                 cartao_sus: cartao_sus,
                 cpf: cpf,
@@ -113,7 +113,7 @@ class Paciente{
         try {
             let pacienteId = req.params.id
             let nome = req.body.nome
-            let data_nacimento = req.body.data_nacimento
+            let data_nascimento = req.body.data_nascimento
             let nome_mae = req.body.nome_mae
             let cartao_sus = req.body.cartao_sus
             let cpf = req.body.cpf
@@ -121,7 +121,7 @@ class Paciente{
 
             await modelPaciente.update({
                 nome: nome,
-                data_nacimento: data_nacimento,
+                data_nacimento: data_nascimento,
                 nome_mae: nome_mae,
                 cartao_sus: cartao_sus,
                 cpf: cpf,
@@ -138,7 +138,7 @@ class Paciente{
     async deletar(req,res){
         try {
             const pacienteId = req.params.id
-            await modelPaciente.detroy({where:{'id':pacienteId}})
+            await modelPaciente.destroy({where:{'id':pacienteId}})
             return res.redirect('/listaPacientes/')
         } catch (error) {
             return res.status(500).send(`Erro ao deletar Paciente: ${error}`)

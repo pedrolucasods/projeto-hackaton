@@ -1,13 +1,13 @@
 const {DataTypes} = require('sequelize')
 const db = require('../db/database')
-const Consulta = require('./consulta')
+const Consulta = require('../models/consulta')
 
 const SinaisVitais = db.define('sinais_vitais',{
     id_consulta:{
         type: DataTypes.INTEGER,
         allowNull: false,
         references:{
-            model:Consulta,
+            model:'consulta',
             key:'id'
         },
         onDelete:'CASCADE'
