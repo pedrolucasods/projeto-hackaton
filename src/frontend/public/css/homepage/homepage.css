@@ -130,3 +130,112 @@ option{
 }
 
 
+.verificar-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.card h3 {
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.card input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.card p {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Painel ocupa a tela toda */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh; /* ocupa 100% da altura da tela */
+  padding: 20px;
+  background: #e6f7ff; /* fundo azul claro */
+}
+
+.main-panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  height: 100%; /* ocupa toda a altura disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distribui seções */
+}
+
+
+.verificar-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card.quadrado {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;   /* aumentamos a largura */
+  height: 300px;  /* aumentamos a altura */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* distribui melhor os elementos */
+}
+
+.card.quadrado h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.card.quadrado label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.card.quadrado input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.card.quadrado p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
+}
