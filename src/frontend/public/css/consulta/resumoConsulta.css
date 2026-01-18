@@ -63,7 +63,6 @@ h1 {
   background-color: #0096c7;
 }
 
-/* Esconde os botões no PDF */
 @media print {
   .botoes-final {
     display: none;

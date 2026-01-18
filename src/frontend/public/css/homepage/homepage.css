@@ -170,14 +170,13 @@ option{
   font-weight: bold;
 }
 
-/* Painel ocupa a tela toda */
 .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh; /* ocupa 100% da altura da tela */
+  height: 100vh;
   padding: 20px;
-  background: #e6f7ff; /* fundo azul claro */
+  background: #e6f7ff;
 }
 
 .main-panel {
@@ -187,10 +186,10 @@ option{
   width: 100%;
   max-width: 1000px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  height: 100%; /* ocupa toda a altura disponível */
+  height: 100%; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* distribui seções */
+  justify-content: space-between; 
 }
 
 
@@ -204,14 +203,14 @@ option{
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 20px;
-  width: 280px;   /* aumentamos a largura */
-  height: 300px;  /* aumentamos a altura */
+  width: 280px;   
+  height: 300px;  
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* distribui melhor os elementos */
+  justify-content: space-between;
 }
 
 .card.quadrado h3 {

@@ -85,12 +85,11 @@ body {
 }
 
 
-/* Botão de voltar */
 .btn-voltar {
   display: inline-block;
   margin-bottom: 15px;
   padding: 8px 16px;
-  background-color: #2782b3; /* azul padrão */
+  background-color: #2782b3; 
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -99,5 +98,5 @@ body {
 }
 
 .btn-voltar:hover {
-  background-color: #0096c7; /* azul mais claro no hover */
+  background-color: #0096c7; 
 }

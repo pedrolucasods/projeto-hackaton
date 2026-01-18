@@ -1,4 +1,3 @@
-/* Fundo geral */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #e6f7ff;
@@ -8,7 +7,7 @@ body {
   color: #333;
 }
 
-/* Título */
+
 .titulo {
   text-align: center;
   font-size: 28px;
@@ -16,7 +15,7 @@ body {
   color: #0077b6;
 }
 
-/* Barra de busca */
+
 .busca {
   display: flex;
   justify-content: center;
@@ -45,7 +44,6 @@ body {
   background-color: #0096c7;
 }
 
-/* Botão cadastrar */
 .btn.cadastrar {
   display: block;
   margin: 0 auto 30px auto;
@@ -61,16 +59,15 @@ body {
   background-color: #0096c7;
 }
 
-/* Grid de pacientes */
+
 #grid-pacientes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* duas colunas */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 20px;
 }
 
-/* Card do paciente */
 .paciente-card {
-  background-color: #659dda; /* azul bem claro, não branco */
+  background-color: #659dda; 
   color: #000;
   border: 1px solid #b3d9ff;
   padding: 20px;
@@ -91,7 +88,7 @@ body {
   margin: 5px 0;
 }
 
-/* Botões dentro do card */
+
 .botoes-acoes {
   display: flex;
   justify-content: space-between;
@@ -127,20 +124,19 @@ body {
   background-color: #a00000;
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   #grid-pacientes {
-    grid-template-columns: 1fr; /* no celular vira uma coluna */
+    grid-template-columns: 1fr; 
   }
 }
 
 
-/* Botão de voltar */
 .btn-voltar {
   display: inline-block;
   margin-bottom: 15px;
   padding: 8px 16px;
-  background-color: #2782b3; /* azul padrão */
+  background-color: #2782b3;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -149,13 +145,13 @@ body {
 }
 
 .btn-voltar:hover {
-  background-color: #0096c7; /* azul mais claro no hover */
+  background-color: #0096c7; 
 }
 
 
 
 .aviso-sem-consulta {
-  background-color: #e6f7ff; /* fundo suave */
+  background-color: #e6f7ff;
   border: 1px solid #b3d9ff;
   border-radius: 12px;
   padding: 30px;
@@ -191,15 +187,13 @@ body {
 }
 
 .aviso-sem-consulta {
-  background-color: #e6f7ff; /* fundo suave */
+  background-color: #e6f7ff;
   border: 1px solid #b3d9ff;
   border-radius: 12px;
   padding: 30px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 500px;
-
-  /* centralização */
   position: absolute;
   top: 50%;
   left: 50%;

@@ -1,14 +1,14 @@
 document.getElementById("form-orientacao").addEventListener("submit", function () {
-  let dadosConsulta = {};
+  let dadosConsulta = {}
   try {
-    dadosConsulta = JSON.parse(sessionStorage.getItem("dadosConsulta") || "{}");
+    dadosConsulta = JSON.parse(sessionStorage.getItem("dadosConsulta") || "{}")
   } catch {
-    dadosConsulta = {};
+    dadosConsulta = {}
   }
 
-  const descricao = document.getElementById("descricao").value;
-  dadosConsulta.orientacoes = [{ descricao }];
+  const descricao = document.getElementById("descricao").value
+  dadosConsulta.orientacoes = [{ descricao }]
 
-  sessionStorage.setItem("dadosConsulta", JSON.stringify(dadosConsulta));
-  document.getElementById("dadosConsulta").value = JSON.stringify(dadosConsulta);
-});
+  sessionStorage.setItem("dadosConsulta", JSON.stringify(dadosConsulta))
+  document.getElementById("dadosConsulta").value = JSON.stringify(dadosConsulta)
+})

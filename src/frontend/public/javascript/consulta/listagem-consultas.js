@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const campoBusca = document.getElementById("campoBusca");
-  const cards = document.querySelectorAll(".consulta-card");
-
+  const campoBusca = document.getElementById("campoBusca")
+  const cards = document.querySelectorAll(".consulta-card")
   campoBusca.addEventListener("input", () => {
-    const termo = campoBusca.value.toLowerCase();
+    const termo = campoBusca.value.toLowerCase()
 
     cards.forEach(card => {
-      const texto = card.innerText.toLowerCase();
+      const texto = card.innerText.toLowerCase()
       if (texto.includes(termo)) {
-        card.style.display = "block"; // mostra
+        card.style.display = "block" 
       } else {
-        card.style.display = "none"; // esconde
+        card.style.display = "none" 
       }
-    });
-  });
-});
+    })
+  })
+})

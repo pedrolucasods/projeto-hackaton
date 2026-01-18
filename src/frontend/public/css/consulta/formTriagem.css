@@ -90,13 +90,11 @@ body {
   }
 }
 
-
-/* Botão de voltar */
 .btn-voltar {
   display: inline-block;
   margin-bottom: 15px;
   padding: 8px 16px;
-  background-color: #2782b3; /* azul padrão */
+  background-color: #2782b3;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
@@ -105,12 +103,12 @@ body {
 }
 
 .btn-voltar:hover {
-  background-color: #0096c7; /* azul mais claro no hover */
+  background-color: #0096c7;
 }
 
 
 .aviso-sem-consulta {
-  background-color: #e6f7ff; /* fundo suave */
+  background-color: #e6f7ff;
   border: 1px solid #b3d9ff;
   border-radius: 12px;
   padding: 30px;
@@ -146,7 +144,7 @@ body {
 }
 
 .aviso-sem-consulta {
-  background-color: #e6f7ff; /* fundo suave */
+  background-color: #e6f7ff;
   border: 1px solid #b3d9ff;
   border-radius: 12px;
   padding: 30px;
@@ -154,7 +152,6 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 500px;
 
-  /* centralização */
   position: absolute;
   top: 50%;
   left: 50%;

@@ -2,10 +2,7 @@
 <h1 class="titulo">Triagem</h1>
 <div id="container">
   <form id="form-triagem" action="/consulta/motivoConsulta" method="post">
-
     {{#if pacientes}}
-
-    <!-- Seleção de paciente -->
     <div class="bloco paciente">
         <label for="pacienteId">Paciente:</label>
         <select id="pacienteId" name="pacienteId" required>
@@ -14,8 +11,6 @@
         {{/each}}
         </select>
     </div>
-
-    <!-- IMC -->
     <div class="bloco">
         <h2>IMC</h2>
         <label>Altura (cm):</label>
@@ -24,8 +19,6 @@
         <input type="number" id="peso" required>
         <p id="imc-status" class="status"></p>
     </div>
-
-    <!-- Pressão Arterial -->
     <div class="bloco">
         <h2>Pressão Arterial</h2>
         <label>Sistólica:</label>
@@ -34,24 +27,18 @@
         <input type="number" id="pressao_diastolica" required>
         <p id="pressao-status" class="status"></p>
     </div>
-
-    <!-- Frequência Cardíaca -->
     <div class="bloco">
         <h2>Frequência Cardíaca</h2>
         <label>BPM:</label>
         <input type="number" id="frequencia" required>
         <p id="frequencia-status" class="status"></p>
     </div>
-
-    <!-- Temperatura -->
     <div class="bloco">
         <h2>Temperatura</h2>
         <label>°C:</label>
         <input type="number" step="0.1" id="temperatura" required>
         <p id="temperatura-status" class="status"></p>
     </div>
-
-    <!-- Glicemia -->
     <div class="bloco">
         <h2>Glicemia</h2>
         <label>mg/dL:</label>
@@ -59,7 +46,6 @@
         <p id="glicemia-status" class="status"></p>
     </div>
 
-    <!-- Campo oculto para enviar os sinais vitais -->
     <input type="hidden" name="sinaisVitais" id="sinaisVitais">
 
     <div class="navegacao">
