@@ -1,0 +1,52 @@
+<div id="container">
+    <a href="/" class="btn-voltar"> <i class="fa fa-home"></i> Inicio </a>
+    <h1 class="titulo">Pacientes</h1>
+
+    <div class="busca">
+    <input id="busca" placeholder="Digite o nome do paciente ou o CPF" />
+    <button onclick="buscarPaciente()">🔍</button>
+    </div>
+
+    {{#if pacientes}}
+        <button class="btn cadastrar" onclick="cadastrarPaciente()">Cadastrar Paciente</button>
+
+        <div id="grid-pacientes">
+        {{#each pacientes}}
+        <div class="paciente-card" data-id="{{id}}">
+            <div class="dados-paciente">
+            <p><strong>Nome:</strong> {{nome}}</p>
+            <p><strong>CPF:</strong> {{cpf}}</p>
+            <p><strong>Nascimento:</strong> {{data_nascimento}}</p>
+            <button class="btn perfil" onclick="Perfil({{id}})">Ver Perfil</button>
+            </div>
+
+            <div class="botoes-acoes">
+            <button class="btn pequeno" onclick="consultas({{id}})">Consultas</button>
+            <button class="btn pequeno" onclick="editar({{id}})">Editar</button>
+            <button class="btn pequeno btn-excluir">Excluir</button>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+    {{else}}
+        <div class="aviso-sem-consulta">
+            <h2>Não há pacientes cadastrados!</h2>
+            <p>Você ainda não possui paciente cadastrado para iniciar as consultas. Clique abaixo para cadastrar um paciente.</p>
+            <a href="/paciente/cadastrar" class="btn cadastrar">Cadastrar Paciente</a>
+        </div>
+    {{/if}}
+
+    <!-- Modal de Exclusão (fora do loop) -->
+    <div id="modalExclusao" class="modal">
+    <div class="modal-content">
+        <h2>Excluir Paciente</h2>
+        <p>Tem certeza que deseja excluir este paciente?</p>
+        <div class="modal-actions">
+        <button id="btnConfirmar" class="btn btn-danger">Sim, excluir</button>
+        <button id="btnCancelar" class="btn btn-secundario">Cancelar</button>
+        </div>
+    </div>
+    </div>
+
+
+</div>

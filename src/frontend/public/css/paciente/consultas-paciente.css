@@ -1,0 +1,137 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+#container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: #0077b6;
+}
+
+.subtitulo {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+#grid-consultas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.consulta-card {
+  background-color: #659dda;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  color: #fff;
+}
+
+.consulta-card p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.acoes-consulta {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-detalhes,
+.btn-editar,
+.btn-excluir,
+.btn.cadastrar {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-detalhes {
+  background-color: #2782b3;
+  color: #fff;
+}
+.btn-detalhes:hover {
+  background-color: #0096c7;
+}
+
+.btn-editar {
+  background-color: #0077b6;
+  color: #fff;
+}
+.btn-editar:hover {
+  background-color: #005f8a;
+}
+
+.btn-excluir {
+  background-color: #d00000;
+  color: #fff;
+}
+.btn-excluir:hover {
+  background-color: #a00000;
+}
+
+.btn.cadastrar {
+  background-color: #2782b3;
+  color: #fff;
+}
+.btn.cadastrar:hover {
+  background-color: #0096c7;
+}
+
+.aviso-sem-consulta {
+  background-color: #e6f7ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.aviso-sem-consulta h2 {
+  color: #0077b6;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.aviso-sem-consulta p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #2782b3;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.btn-voltar:hover {
+  background-color: #0096c7;
+}
+.btn-voltar i {
+  margin-right: 6px;
+}

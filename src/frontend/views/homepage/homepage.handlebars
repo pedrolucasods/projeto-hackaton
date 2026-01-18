@@ -1,5 +1,26 @@
-<div>
-    <h1 id="boas_novas">Bem vindo a rota Home!</h1>
-    <br>
-    <button onclick="say_hi()">Ola</button>
+<div class="container">
+    <h1 class="titulo">SENA-ENFER</h1>
+    <div class="botoes">
+        <button onclick="cadastrarPaciente()" class="cadastrar">Cadastrar</button>
+        <button class="btn verde grande" onclick="formTriagem()">Iniciar Consulta</button>
+    </div>
+    <div class="lista">
+        <h2>Listagem</h2>
+
+        <label for="dados">Dados:</label>
+        <select id="dados" name="dados">
+            <option value="pacientes">Pacientes</option>
+            <option value="consultas">Consultas</option>
+        </select><br>
+
+        <button class="listar" onclick="listagem()">Listar</button>
+    </div>
+    <div class="verificar">
+        <h2>Verificar</h2>
+        <div class="verificar-buttons">
+            <button class="btn">IMC</button>
+            <button class="btn">Pressão</button>
+            <button class="btn">Glicemia</button>
+        </div>
+    </div>        
 </div>

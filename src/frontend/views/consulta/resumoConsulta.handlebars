@@ -1,0 +1,51 @@
+<h1>Resumo da Consulta</h1>
+
+<div class="section">
+  <h2>Dados do Paciente</h2>
+  <p><strong>ID:</strong> {{consulta.id_paciente}}</p>
+  <p><strong>Data:</strong> {{consulta.data_consulta}}</p>
+  <p><strong>Motivo da vinda:</strong> {{consulta.motivo_vinda}}</p>
+  <p><strong>Queixa principal:</strong> {{consulta.queixa_principal}}</p>
+</div>
+
+<div class="section">
+  <h2>Sinais Vitais</h2>
+  <ul>
+    {{#each consulta.sinais_vitais}}
+      <li><strong>{{this.sinal}}:</strong> {{this.valor}} — {{this.resultado}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Sintomas</h2>
+  <ul>
+    {{#each consulta.sintomas}}
+      <li>{{this.descricao}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Perguntas</h2>
+  <ul>
+    {{#each consulta.perguntas}}
+      <li><strong>{{this.pergunta}}:</strong> {{this.resposta}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Orientações</h2>
+  <ul>
+    {{#each consulta.orientacaos}}
+      <li>{{this.descricao}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+
+<div class="botoes-final">
+  <a href="/consulta/" class="btn btn-listagem">Listagem de Consultas</a>
+  <button type="button" class="btn btn-pdf">Gerar PDF</button>
+</div>

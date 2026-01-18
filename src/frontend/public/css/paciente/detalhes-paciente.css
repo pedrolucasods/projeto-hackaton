@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 32px;
+  color: #0077b6;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.paciente-ficha {
+  background-color: #659dda;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  text-align: left;
+  color: #fff;
+}
+
+.paciente-ficha h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.paciente-ficha p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.paciente-ficha hr {
+  border: none;
+  border-top: 1px solid #b3d9ff;
+  margin: 20px 0;
+}
+
+.acoes-paciente {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.editar {
+  background-color: #2782b3;
+  color: #fff;
+}
+
+.btn.editar:hover {
+  background-color: #0096c7;
+}
+
+.btn.excluir {
+  background-color: #d00000;
+  color: #fff;
+}
+
+.btn.excluir:hover {
+  background-color: #a00000;
+}
+
+.btn-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #2782b3;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-voltar:hover {
+  background-color: #0096c7;
+}
+
+.btn-voltar i {
+  margin-right: 6px;
+}

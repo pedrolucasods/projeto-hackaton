@@ -1,0 +1,171 @@
+/* Fundo geral */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f7ff; /* mesmo fundo */
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Título */
+.titulo {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+/* Barra de busca */
+.busca-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.busca-form input {
+  padding: 10px;
+  font-size: 14px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.busca-form button {
+  padding: 10px 16px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.busca-form button:hover {
+  background-color: #0096c7;
+}
+
+/* Grid de consultas */
+#resultadoConsultas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* duas colunas */
+  gap: 20px;
+}
+
+/* Card da consulta */
+.consulta-card {
+  background-color: #659dda; /* azul claro igual paciente */
+  color: #000;
+  border: 1px solid #b3d9ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.consulta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.consulta-card p {
+  margin: 5px 0;
+}
+
+/* Botão detalhes */
+.btn-detalhes {
+  background-color: #2782b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn-detalhes:hover {
+  background-color: #0096c7;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #resultadoConsultas {
+    grid-template-columns: 1fr; /* no celular vira uma coluna */
+  }
+}
+
+/* Botão de voltar */
+.btn-voltar {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  background-color: #2782b3; /* azul padrão */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #0096c7; /* azul mais claro no hover */
+}
+
+.aviso-sem-consulta {
+  background-color: #e6f7ff; /* fundo suave */
+  border: 1px solid #b3d9ff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.aviso-sem-consulta h2 {
+  color: #0077b6;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.aviso-sem-consulta p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.aviso-sem-consulta .btn.cadastrar {
+  background-color: #2782b3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.aviso-sem-consulta .btn.cadastrar:hover {
+  background-color: #0096c7;
+}
+
+.aviso-sem-consulta {
+  background-color: #e6f7ff; /* fundo suave */
+  border: 1px solid #b3d9ff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 500px;
+
+  /* centralização */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

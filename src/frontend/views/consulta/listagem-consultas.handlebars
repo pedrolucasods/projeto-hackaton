@@ -1,0 +1,28 @@
+    <a href="/" class="btn-voltar"> <i class="fa fa-home"></i> Inicio </a>
+<h1 class="titulo">Últimas Consultas</h1>
+
+<form class="busca-form" onsubmit="return false;">
+  <input type="text" id="campoBusca" placeholder="Digite o nome ou CPF" />
+</form>
+
+<div id="resultadoConsultas" class="carrossel-consultas">
+  {{#if consultas}}
+    {{#each consultas}}
+      <div class="consulta-card">
+        <p><strong>Nº Consulta:</strong> {{this.id}}</p>
+        <p><strong>Nome:</strong> {{this.paciente.nome}}</p>
+        <p><strong>CPF:</strong> {{this.paciente.cpf}}</p>
+        <p><strong>Data:</strong> {{this.data_consulta}}</p>
+        <p><strong>Motivo:</strong> {{this.motivo_vinda}}</p>
+        <a href="/consulta/resumo/{{this.id}}" class="btn-detalhes">Ver Detalhes</a>
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="aviso-sem-consulta">
+      <h2>Nenhuma consulta encontrada</h2>
+      <p>Você ainda não possui consultas registradas. Clique abaixo para cadastrar uma nova.</p>
+      <a href="/consulta/triagem" class="btn cadastrar">Cadastrar Consulta</a>
+    </div>
+  {{/if}}
+</div>
+
