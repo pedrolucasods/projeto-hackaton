@@ -1,5 +1,45 @@
-<div>
-    <h1 id="boas_novas">Bem vindo a rota Home!</h1>
-    <br>
-    <button onclick="say_hi()">Ola</button>
+<div class="container">
+    <h1 class="titulo">SENA-ENFER</h1>
+    <div class="botoes">
+        <button onclick="cadastrarPaciente()" class="cadastrar">Cadastrar</button>
+        <button class="btn verde grande" onclick="formTriagem()">Iniciar Consulta</button>
+    </div>
+    <div class="lista">
+        <h2>Listagem</h2>
+
+        <label for="dados">Dados:</label>
+        <select id="dados" name="dados">
+            <option value="pacientes">Pacientes</option>
+            <option value="consultas">Consultas</option>
+        </select><br>
+
+        <button class="listar" onclick="listagem()">Listar</button>
+    </div>
+
+    <div class="verificar">
+  <h2>Verificar Saúde</h2>
+  <div class="verificar-grid">
+    <div class="card quadrado">
+      <h3>IMC</h3>
+      <label>Peso (kg): <input type="number" id="peso"></label>
+      <label>Altura (m): <input type="number" step="0.01" id="altura"></label>
+      <p id="resultado-imc">--</p>
+    </div>
+
+    <div class="card quadrado">
+      <h3>Pressão</h3>
+      <label>Sistólica: <input type="number" id="sistolica"></label>
+      <label>Diastólica: <input type="number" id="diastolica"></label>
+      <p id="resultado-pressao">--</p>
+    </div>
+
+    <div class="card quadrado">
+      <h3>Glicemia</h3>
+      <label>Valor (mg/dL): <input type="number" id="glicemia"></label>
+      <p id="resultado-glicemia">--</p>
+    </div>
+  </div>
+</div>
+
+        
 </div>

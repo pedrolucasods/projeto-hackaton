@@ -21,7 +21,7 @@ router.get('/consultas/:id', ControllerPaciente.consultas)
 router.get('/editar/:id', ControllerPaciente.editar)
 
 // rota editar paciente no banco
-router.put('/editar/:id', ControllerPaciente.UpdatePaciente)
+router.post('/editar/:id', ControllerPaciente.UpdatePaciente)
 
 // rota deletar paciente
 router.delete('/deletar/:id', ControllerPaciente.deletar)

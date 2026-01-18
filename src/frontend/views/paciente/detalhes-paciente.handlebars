@@ -1,0 +1,32 @@
+<div id="container">
+  <!-- Botão de voltar -->
+  <a href="/paciente" class="btn-voltar"><i class="fa fa-home"></i> Voltar</a>
+
+  <!-- Título da página -->
+  <h1 class="titulo">Ficha do Paciente</h1>
+  <h3 class="subtitulo">Informações completas e histórico</h3>
+
+  <!-- Card centralizado -->
+  <div class="paciente-ficha">
+    <h2>{{paciente.nome}}</h2>
+    <p><strong>CPF:</strong> {{paciente.cpf}}</p>
+    <p><strong>Data de Nascimento:</strong> {{paciente.data_nascimento}}</p>
+    <p><strong>Nome da Mãe:</strong> {{paciente.nome_mae}}</p>
+    <p><strong>Cartão SUS:</strong> {{paciente.cartao_sus}}</p>
+    <p><strong>Endereço:</strong> {{paciente.endereco}}</p>
+
+    <hr>
+
+    <p><strong>Total de Consultas:</strong> {{quantidade_consultas}}</p>
+
+    {{#if ultimaConsulta}}
+      <p><strong>Última Consulta:</strong> {{ultimaConsulta.data_consulta}} — {{ultimaConsulta.motivo_vinda}}</p>
+    {{else}}
+      <p><em>Este paciente ainda não possui consultas registradas.</em></p>
+    {{/if}}
+
+    <div class="acoes-paciente">
+      <a href="/paciente/editar/{{paciente.id}}" class="btn editar">Editar</a>
+    </div>
+  </div>
+</div>

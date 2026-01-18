@@ -79,7 +79,7 @@ const staticOptions = {
     }
     // Cache para CSS e JS
     else if (path.match(/\.(css|js)$/)) {
-      res.setHeader('Cache-Control', 'public, max-age=31536000');
+      res.setHeader('Cache-Control', 'no-store');
     }
     // Cache para fontes
     else if (path.match(/\.(woff|woff2|ttf|eot)$/)) {

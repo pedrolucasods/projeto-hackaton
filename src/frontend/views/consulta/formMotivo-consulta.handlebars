@@ -1,0 +1,52 @@
+<h1 class="titulo">Motivo da Consulta</h1>
+<div id="container">
+  <form id="form-motivo" action="/consulta/orientacao" method="post">
+    <div class="bloco">
+      <h2>Queixa Principal</h2>
+      <input type="text" id="queixaPrincipal" name="queixaPrincipal" placeholder="Digite a queixa principal" required>
+    </div>
+    <div class="bloco">
+      <h2>Motivo da Consulta</h2>
+      <input type="text" id="motivoVinda" name="motivoVinda" placeholder="Digite o motivo da consulta" required>
+    </div>
+    <div id="sintomas" class="bloco">
+      <h2>Sintomas</h2>
+      <input type="text" name="sintoma" placeholder="Descreva o sintoma">
+      <input type="text" name="sintoma" placeholder="Descreva o sintoma">
+      <button type="button" class="btn" onclick="adicionarSintoma()">+ Adicionar mais sintomas</button>
+    </div>
+    <div id="perguntas" class="bloco">
+      <h2>Perguntas</h2>
+      <div class="pergunta">
+        <label>Pergunta:</label>
+        <input type="text" value="Há quanto tempo apresenta os sintomas?" readonly>
+        <label>Resposta:</label>
+        <input type="text" name="resposta">
+      </div>
+      <div class="pergunta">
+        <label>Pergunta:</label>
+        <input type="text" value="Está tomando algum medicamento?" readonly>
+        <label>Resposta:</label>
+        <input type="text" name="resposta">
+      </div>
+      <div class="pergunta">
+        <label>Pergunta:</label>
+        <input type="text" value="Possui alguma alergia?" readonly>
+        <label>Resposta:</label>
+        <input type="text" name="resposta">
+      </div>
+      <div class="pergunta">
+        <label>Pergunta:</label>
+        <input type="text" value="Faz uso de bebidas alcoólicas ou de tabaco?" readonly>
+        <label>Resposta:</label>
+        <input type="text" name="resposta">
+      </div>
+      <button type="button" class="btn" onclick="adicionarPergunta()">+ Adicionar mais perguntas</button>
+    </div>
+    <input type="hidden" name="perguntasConsulta" id="perguntasConsulta">
+    <input type="hidden" name="sintomas" id="sintomasConsulta">
+    <input type="hidden" name="dadosConsulta" id="dadosConsulta">
+
+    <button type="submit" class="btn salvar">Salvar Consulta</button>
+  </form>
+</div>

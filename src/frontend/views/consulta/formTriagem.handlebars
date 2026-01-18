@@ -1,0 +1,63 @@
+<a href="/" class="btn-voltar"> <i class="fa fa-home"></i> Inicio </a>
+<h1 class="titulo">Triagem</h1>
+<div id="container">
+  <form id="form-triagem" action="/consulta/motivoConsulta" method="post">
+    {{#if pacientes}}
+    <div class="bloco paciente">
+        <label for="pacienteId">Paciente:</label>
+        <select id="pacienteId" name="pacienteId" required>
+        {{#each pacientes}}
+            <option value="{{id}}">{{nome}}</option>
+        {{/each}}
+        </select>
+    </div>
+    <div class="bloco">
+        <h2>IMC</h2>
+        <label>Altura (cm):</label>
+        <input type="number" id="altura" required>
+        <label>Peso (kg):</label>
+        <input type="number" id="peso" required>
+        <p id="imc-status" class="status"></p>
+    </div>
+    <div class="bloco">
+        <h2>Pressão Arterial</h2>
+        <label>Sistólica:</label>
+        <input type="number" id="pressao_sistolica" required>
+        <label>Diastólica:</label>
+        <input type="number" id="pressao_diastolica" required>
+        <p id="pressao-status" class="status"></p>
+    </div>
+    <div class="bloco">
+        <h2>Frequência Cardíaca</h2>
+        <label>BPM:</label>
+        <input type="number" id="frequencia" required>
+        <p id="frequencia-status" class="status"></p>
+    </div>
+    <div class="bloco">
+        <h2>Temperatura</h2>
+        <label>°C:</label>
+        <input type="number" step="0.1" id="temperatura" required>
+        <p id="temperatura-status" class="status"></p>
+    </div>
+    <div class="bloco">
+        <h2>Glicemia</h2>
+        <label>mg/dL:</label>
+        <input type="number" id="glicemia" required>
+        <p id="glicemia-status" class="status"></p>
+    </div>
+
+    <input type="hidden" name="sinaisVitais" id="sinaisVitais">
+
+    <div class="navegacao">
+        <button type="button" class="btn" onclick="history.back()">Voltar</button>
+        <button type="submit" class="btn">Prosseguir</button>
+    </div>
+    </form>
+    {{else}}
+    <div class="aviso-sem-consulta">
+      <h2>Não há pacientes cadastrados!</h2>
+      <p>Você ainda não possui paciente cadastrado para iniciar as consultas. Clique abaixo para cadastrar um paciente.</p>
+      <a href="/paciente/cadastrar" class="btn cadastrar">Cadastrar Paciente</a>
+    </div>
+    {{/if}}
+</div>

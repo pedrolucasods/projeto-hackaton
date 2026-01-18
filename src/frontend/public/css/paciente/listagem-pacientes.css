@@ -1,0 +1,201 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f7ff;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  color: #333;
+}
+
+
+.titulo {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0077b6;
+}
+
+
+.busca {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.busca input {
+  padding: 10px;
+  font-size: 14px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.busca button {
+  padding: 10px 16px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.busca button:hover {
+  background-color: #0096c7;
+}
+
+.btn.cadastrar {
+  display: block;
+  margin: 0 auto 30px auto;
+  background-color: #0077b6;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.cadastrar:hover {
+  background-color: #0096c7;
+}
+
+
+#grid-pacientes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+}
+
+.paciente-card {
+  background-color: #659dda; 
+  color: #000;
+  border: 1px solid #b3d9ff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.paciente-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.dados-paciente p {
+  margin: 5px 0;
+}
+
+
+.botoes-acoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: #2782b3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0096c7;
+}
+
+.btn.pequeno {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.btn-excluir {
+  background-color: #d00000;
+}
+
+.btn-excluir:hover {
+  background-color: #a00000;
+}
+
+
+@media (max-width: 768px) {
+  #grid-pacientes {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+.btn-voltar {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  background-color: #2782b3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #0096c7; 
+}
+
+
+
+.aviso-sem-consulta {
+  background-color: #e6f7ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.aviso-sem-consulta h2 {
+  color: #0077b6;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.aviso-sem-consulta p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.aviso-sem-consulta .btn.cadastrar {
+  background-color: #2782b3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.aviso-sem-consulta .btn.cadastrar:hover {
+  background-color: #0096c7;
+}
+
+.aviso-sem-consulta {
+  background-color: #e6f7ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

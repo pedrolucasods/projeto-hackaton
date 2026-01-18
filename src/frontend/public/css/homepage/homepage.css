@@ -1,6 +1,240 @@
-#boas_novas{
-    color: bisque;
+body {
+    margin: 0;
+    background: #e6f7ff; 
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
 }
-div{
-    background-color: cadetblue;
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 40px;
+    background: #ffffff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.cadastrar,
+.btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cadastrar {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+.btn {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #0096c7;
+}
+
+.btn:hover,
+.cadastrar:hover {
+    background-color: #73b0ff;
+}
+
+.btn.grande {
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+.lista {
+    margin: 0 auto 40px;
+    border: 1px solid #d1e0ff;
+    padding: 20px;
+    width: 300px;
+    background-color: #b5e1ff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.lista h2 {
+    margin-top: 0;
+    color: #005f73;
+}
+
+select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.listar {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.listar:hover {
+    background-color: #73b0ff;
+}
+
+.verificar {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.verificar h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #005f73;
+}
+
+.verificar-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.verificar-buttons .btn {
+    background-color: #0096c7;
+    font-size: 16px;
+}
+
+option{
+    border-radius: 4px;
+}
+
+
+.verificar-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.card h3 {
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.card label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.card input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.card p {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 20px;
+  background: #e6f7ff;
+}
+
+.main-panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+
+.verificar-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card.quadrado {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;   
+  height: 300px;  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card.quadrado h3 {
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.card.quadrado label {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.card.quadrado input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.card.quadrado p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
 }

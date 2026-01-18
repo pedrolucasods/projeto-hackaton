@@ -17,5 +17,7 @@ router.post('/orientacao', ControllerConsulta.orientacao)
 // rota cadastrar
 router.post('/CadastrarConsulta', ControllerConsulta.cadastrarConsulta)
 
+// rota resumo
+router.get('/resumo/:id', ControllerConsulta.final)
 
 module.exports = router

@@ -1,0 +1,26 @@
+<div id="container">
+    <a href="/paciente/detalhes/{{paciente.id}}" class="btn-voltar"><i class="fa fa-home"></i> Voltar</a>
+    <h1 class="titulo">{{titulo}}</h1>
+    <h3 class="subtitulo">Paciente: {{paciente.nome}} — CPF: {{paciente.cpf}}</h3>
+    <div id="grid-consultas">
+        {{#if consultas.length}}
+        {{#each consultas}}
+            <div class="consulta-card">
+            <p><strong>Nº Consulta:</strong> {{this.id}}</p>
+            <p><strong>Data:</strong> {{this.data_consulta}}</p>
+            <p><strong>Motivo:</strong> {{this.motivo_vinda}}</p>
+            <div class="acoes-consulta">
+                <a href="/consulta/resumo/{{this.id}}" class="btn-detalhes">Ver Detalhes</a>
+            </div>
+            </div>
+        {{/each}}
+        {{else}}
+        <div class="aviso-sem-consulta">
+            <h2>Nenhuma consulta encontrada</h2>
+            <p>Este paciente ainda não possui consultas registradas.</p>
+            <a href="/consulta/cadastrar/{{paciente.id}}" class="btn cadastrar">Cadastrar Consulta</a>
+        </div>
+        {{/if}}
+    </div>
+</div>
+

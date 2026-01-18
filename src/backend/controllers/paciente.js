@@ -7,10 +7,9 @@ class Paciente{
     async lista(req,res){
         try {
             const pacientes = await modelPaciente.findAll()
-            return res.send(pacientes)
-            return res.render('listagem-pacientes',{
-                script:'listagem-pacientes.js',
-                stylesheet:'listagem-pacientes.css',
+            return res.render('paciente/listagem-pacientes',{
+                script:'paciente/listagem-pacientes.js',
+                stylesheet:'paciente/listagem-pacientes.css',
                 'pacientes': pacientes
             })
 
@@ -23,9 +22,9 @@ class Paciente{
     // rota get formulario de Cadastro
     formCadastrar(req,res){
         try {
-            return res.render('formCadastrar-paciente',{
-                script:'formCadastrar-paciente.js',
-                stylesheet: 'formCadastrar-paciente.css'
+            return res.render('paciente/formCadastrar-paciente',{
+                script:'paciente/formCadastrar-paciente.js',
+                stylesheet: 'paciente/formCadastrar-paciente.css'
             })
         } catch (error) {
             return res.status(500).send(`Erro ao carregar o formulario!: ${error}`)
@@ -43,15 +42,26 @@ class Paciente{
             let cpf = req.body.cpf
             let endereco = req.body.endereco
 
-            await modelPaciente.create({
-                nome: nome,
-                data_nascimento: data_nascimento,
-                nome_mae: nome_mae,
-                cartao_sus: cartao_sus,
-                cpf: cpf,
-                endereco: endereco
-            })
-            return res.redirect('/listaPacientes/')
+            const paciente = await modelPaciente.findOne({where:{'cpf': cpf}})
+            
+            if(paciente){
+                return res.render('paciente/formCadastrar-paciente',{
+                script:'paciente/formCadastrar-paciente.js',
+                stylesheet: 'paciente/formCadastrar-paciente.css',
+                error:'Ja existe um paciente com o mesmo cpf!'
+                })
+            }else{
+                    await modelPaciente.create({
+                    nome: nome,
+                    data_nascimento: data_nascimento,
+                    nome_mae: nome_mae,
+                    cartao_sus: cartao_sus,
+                    cpf: cpf,
+                    endereco: endereco
+                })
+                return res.redirect('/paciente/')
+            }
+            
         } catch (error) {
             return res.status(500).send(`Erro ao cadastrar paciente! : ${error}`)
         }
@@ -64,11 +74,17 @@ class Paciente{
             const paciente = await modelPaciente.findOne({where:{'id':pacienteId}})
             const consultas = await modelConsulta.findAll({where:{'id_paciente':pacienteId}})
             const Quantidade_consultas = consultas.length
-            return res.render('detalhes-paciente',{
-                script:'detalhes-paciente.js',
-                stylesheet:'detalhes-paciente.css',
+            const ultimaConsulta = await modelConsulta.findOne({
+                where: { id_paciente: pacienteId },
+                order: [['data_consulta', 'DESC']]
+            });
+
+            return res.render('paciente/detalhes-paciente',{
+                script:'paciente/detalhes-paciente.js',
+                stylesheet:'paciente/detalhes-paciente.css',
                 'quantidade_consultas':Quantidade_consultas,
-                'paciente': paciente
+                'paciente': paciente,
+                ultimaConsulta
             })
         } catch (error) {
             return res.status(500).send(`Erro ao exibir o paciente : ${error}`)
@@ -79,13 +95,18 @@ class Paciente{
     async consultas(req,res){
         try {
             const pacienteId = req.params.id
-            const consultas = await modelConsulta.findAll({where:{'id_paciente': pacienteId}})
+            const consultas = await modelConsulta.findAll({
+                where: { id_paciente: pacienteId },
+                include: [{ model: modelPaciente, as: 'paciente' }],
+                order: [['data_consulta', 'DESC']]
+            })
             const paciente = await modelPaciente.findOne({where:{'id': pacienteId}})
-            return res.render('consultas-paciente',{
-                script:'consultas-paciente.js',
-                stylesheet:'consultas-paciente.css',
+            return res.render('paciente/consultas-paciente',{
+                script:'paciente/consultas-paciente.js',
+                stylesheet:'paciente/consultas-paciente.css',
                 'paciente': paciente,
-                'consultas': consultas
+                'consultas': consultas,
+                'titulo':`Consultas de ${paciente.nome}`
             })
         } catch (error) {
             return res.status(500).send(`Erro ao exibir as consultas!: ${error}`)
@@ -98,9 +119,9 @@ class Paciente{
         try {
             const pacienteId = req.params.id
             const paciente = await modelPaciente.findOne({where:{'id': pacienteId}})
-            return res.render('formEditar-paciente',{
-                script:'formEditar-paciente.js',
-                stylesheet:'formEditar-paciente.css',
+            return res.render('paciente/formEditar-paciente',{
+                script:'paciente/formEditar-paciente.js',
+                stylesheet:'paciente/formEditar-paciente.css',
                 'paciente': paciente
             })
         } catch (error) {
@@ -111,7 +132,7 @@ class Paciente{
     // rota put editar paciente
     async UpdatePaciente(req,res){
         try {
-            let pacienteId = req.params.id
+            let pacienteId = parseInt(req.params.id)
             let nome = req.body.nome
             let data_nascimento = req.body.data_nascimento
             let nome_mae = req.body.nome_mae
@@ -119,16 +140,16 @@ class Paciente{
             let cpf = req.body.cpf
             let endereco = req.body.endereco
 
-            await modelPaciente.update({
+            const newpaciente = await modelPaciente.update({
                 nome: nome,
-                data_nacimento: data_nascimento,
+                data_nascimento: data_nascimento,
                 nome_mae: nome_mae,
                 cartao_sus: cartao_sus,
                 cpf: cpf,
                 endereco: endereco
             },{where:{'id': pacienteId}})
 
-            return res.redirect('/listaPacientes/')
+            return res.redirect('/paciente/')
         } catch (error) {
             return res.status(500).send(`Erro ao editar o paciente! ${error}`)
         }
@@ -137,9 +158,9 @@ class Paciente{
     // rota delete paciente
     async deletar(req,res){
         try {
-            const pacienteId = req.params.id
+            const pacienteId = parseInt(req.params.id)
             await modelPaciente.destroy({where:{'id':pacienteId}})
-            return res.redirect('/listaPacientes/')
+            return res.redirect('/paciente/')
         } catch (error) {
             return res.status(500).send(`Erro ao deletar Paciente: ${error}`)
         }

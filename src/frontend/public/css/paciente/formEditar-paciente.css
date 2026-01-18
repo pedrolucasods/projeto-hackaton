@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background: #e6f7ff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+}
+
+.titulo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #73b0ff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#containerForm {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#containerForm h2 {
+  color: #005f73;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#containerForm label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0077b6;
+}
+
+#containerForm input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1e0ff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  background-color: #e6f7ff;
+  color: #333;
+}
+
+#containerForm button {
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#containerForm button:hover {
+  background-color: #73b0ff;
+}
+
+#containerForm .erro {
+  display: block;
+  background: #ffcccc;
+  color: #b00020;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.btn-voltar {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  background-color: #2782b3; 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #0096c7; 
+}
