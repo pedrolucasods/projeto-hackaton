@@ -10,6 +10,14 @@
 			<label for="nome">Nome:</label>
 			<input id="nome" name="nome" required>
 
+			<div id="select">
+				<label for="sexo" >Sexo:</label>
+				<select name="sexo">
+					<option value="Maculino">Maculino</option>
+					<option value="Feminino">Feminino</option>
+				</select>
+			</div>
+
 			<label for="data_nascimento">Data de nascimento:</label>
 			<input id="data_nascimento" type="date" name="data_nascimento" required>
 
@@ -23,6 +31,10 @@
 			<label for="cpf">CPF:</label>
 			<input id="cpf" name="cpf" required>
 			<span class="erro" style="display: none;" id="spancpf"></span>
+
+			<label for="endereco">Endereço:</label>
+			<input id="endereco" name="endereco" required>
+
 			<button type="submit">Salvar</button>
 		</form>
 	</div>

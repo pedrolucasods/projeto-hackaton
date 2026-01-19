@@ -7,6 +7,19 @@
                     <label>Nome:</label><br>
                     <input name="nome" value="{{paciente.nome}}" required>
                     <br>
+                    <div id="select">
+                    <label for="sexo">Sexo:</label>
+                        <select name="sexo">
+                            {{#ifEquals paciente.sexo "Masculino"}}
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                            {{else}}
+                                <option value="Feminino">Feminino</option>
+                                <option value="Masculino">Masculino</option>
+                            {{/ifEquals}}
+                        </select>
+                    </div>
+    
                     <label>Data de nascimento:</label><br>
                     <input type="date" name="data_nascimento" value="{{paciente.data_nascimento}}" required><br>
                     <label>Nome da mãe:</label><br>
@@ -15,6 +28,8 @@
                     <input name="cartao_sus" value="{{paciente.cartao_sus}}" required><br>
                     <label>CPF:</label><br>
                     <input name="cpf" value="{{paciente.cpf}}" required><br><br>
+                    <label for="endereco">Endereço:</label>
+			        <input id="endereco" name="endereco" value="{{paciente.endereco}}" required>
                     <button type="submit">Salvar</button>
                 </form>
         </div>
