@@ -77,7 +77,7 @@ class Paciente{
             const ultimaConsulta = await modelConsulta.findOne({
                 where: { id_paciente: pacienteId },
                 order: [['data_consulta', 'DESC']]
-            });
+            })
 
             return res.render('paciente/detalhes-paciente',{
                 script:'paciente/detalhes-paciente.js',
