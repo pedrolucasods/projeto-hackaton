@@ -41,7 +41,7 @@ class Paciente{
             let cartao_sus = req.body.cartao_sus
             let cpf = req.body.cpf
             let endereco = req.body.endereco
-
+            let sexo = req.body.sexo
             const paciente = await modelPaciente.findOne({where:{'cpf': cpf}})
             
             if(paciente){
@@ -57,7 +57,8 @@ class Paciente{
                     nome_mae: nome_mae,
                     cartao_sus: cartao_sus,
                     cpf: cpf,
-                    endereco: endereco
+                    endereco: endereco,
+                    sexo: sexo
                 })
                 return res.redirect('/paciente/')
             }
@@ -139,6 +140,7 @@ class Paciente{
             let cartao_sus = req.body.cartao_sus
             let cpf = req.body.cpf
             let endereco = req.body.endereco
+            let sexo = req.body.sexo
 
             const newpaciente = await modelPaciente.update({
                 nome: nome,
@@ -146,7 +148,8 @@ class Paciente{
                 nome_mae: nome_mae,
                 cartao_sus: cartao_sus,
                 cpf: cpf,
-                endereco: endereco
+                endereco: endereco,
+                sexo: sexo
             },{where:{'id': pacienteId}})
 
             return res.redirect('/paciente/')

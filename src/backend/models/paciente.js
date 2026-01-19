@@ -6,6 +6,10 @@ const Paciente = db.define('paciente',{
         type: DataTypes.STRING,
         allowNull: false
     },
+    sexo:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     data_nascimento:{
         type: DataTypes.DATEONLY,
         allowNull: false
