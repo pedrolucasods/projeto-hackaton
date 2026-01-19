@@ -1,28 +1,29 @@
 <a href="/" class="btn-voltar"> <i class="fa fa-home"></i> Inicio </a>
 <h1 class="titulo">Cadastro</h1>
 <div id="container">
-  <div id="containerForm">
-    {{#if error}}
-      <span class="erro">{{error}}</span>
-    {{/if}}
-    <h2>Formulário</h2>
-    <form action="/paciente/cadastrar/" method="post">
-      <label for="nome">Nome:</label>
-      <input id="nome" name="nome" required>
+	<div id="containerForm">
+		{{#if error}}
+			<span class="erro">{{error}}</span>
+		{{/if}}
+		<h2>Formulário</h2>
+		<form id="form" action="/paciente/cadastrar/" method="post">
+			<label for="nome">Nome:</label>
+			<input id="nome" name="nome" required>
 
-      <label for="data_nascimento">Data de nascimento:</label>
-      <input id="data_nascimento" type="date" name="data_nascimento" required>
+			<label for="data_nascimento">Data de nascimento:</label>
+			<input id="data_nascimento" type="date" name="data_nascimento" required>
 
-      <label for="nome_mae">Nome da mãe:</label>
-      <input id="nome_mae" name="nome_mae" required>
+			<label for="nome_mae">Nome da mãe:</label>
+			<input id="nome_mae" name="nome_mae" required>
 
-      <label for="cartao_sus">Número cartão do SUS:</label>
-      <input id="cartao_sus" name="cartao_sus" required>
+			<label for="cartao_sus">Número cartão do SUS:</label>
+			<input id="cartao_sus" name="cartao_sus" required>
 
-      <label for="cpf">CPF:</label>
-      <input id="cpf" name="cpf" required>
-
-      <button type="submit">Salvar</button>
-    </form>
-  </div>
+	
+			<label for="cpf">CPF:</label>
+			<input id="cpf" name="cpf" required>
+			<span class="erro" style="display: none;" id="spancpf"></span>
+			<button type="submit">Salvar</button>
+		</form>
+	</div>
 </div>
