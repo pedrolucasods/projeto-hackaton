@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     const form = document.getElementById('form')
     form.addEventListener('submit', function(event){
-        let cpf = document.getElementById('cpf')
+        let cpf = document.getElementById('cpf').value
         if(!validaCPF(cpf)){
             spancpf.style.display = 'grid'
             spancpf.textContent = 'Erro, CPF inválido!'

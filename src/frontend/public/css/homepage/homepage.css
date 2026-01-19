@@ -263,3 +263,19 @@ h5{
 #listar-p{
   width: 180px;
 }
+
+#qtd{
+  background-color: #ffffff;
+  box-shadow: 0 4px 1px rgba(0,0,0,0.1);
+  width: 40px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+#container-qtd{
+  gap: 10px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}

@@ -8,7 +8,10 @@
 		<div class="lista">
 			<h2>Pacientes</h2>
 
-			<h5>Quantidade: {{pacientes}}</h5>
+			<div id="container-qtd"><h5>Quantidade:</h5>
+			<h5><div id="qtd">{{pacientes}}</div></h5>
+			</div>
+			
 			<button onclick="cadastrarPaciente()" class="cadastrar">Cadastrar Paciente</button>
 			<br><br>
 			<button class="cadastrar" id="listar-p" onclick="listarPaciente()">Listar Pacientes</button>
@@ -17,7 +20,10 @@
 		{{!-- Consutlas --}}
 		<div class="lista">
 			<h2>Consultas</h2>
-			<h5>Quantidade: {{consultas}}</h5>
+
+			<div id="container-qtd"><h5>Quantidade:</h5>
+			<h5><div id="qtd">{{consultas}}</div></h5>
+			</div>
 			<button class="cadastrar" onclick="formTriagem()">Iniciar Consulta</button>
 			<br><br>
 			<button class="cadastrar" onclick="listarConsulta()">Listar Consultas</button>
