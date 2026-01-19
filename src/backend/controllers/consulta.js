@@ -151,10 +151,12 @@ class Consulta{
             const consulta =await modelConsulta.findByPk(consultaId,{
                 include: [modelSintomas, modelPerguntas, modelSinaisVitais, modelOrientacao]
             })
+            const paciente = await modelPaciente.findOne({where:{'id':consulta.id_paciente}})
             return res.render('consulta/resumoConsulta',{
                     script:'consulta/resumoConsulta.js',
                     stylesheet:'consulta/resumoConsulta.css',
-                    consulta: consulta
+                    consulta: consulta,
+                    paciente
                 })
         } catch (error) {
             res.status(500).send(`Erro: ${error}`)
