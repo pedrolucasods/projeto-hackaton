@@ -1,45 +1,52 @@
 <div class="container">
-    <h1 class="titulo">SENA-ENFER</h1>
-    <div class="botoes">
-        <button onclick="cadastrarPaciente()" class="cadastrar">Cadastrar Paciente</button>
-        <button class="btn verde grande" onclick="formTriagem()">Iniciar Consulta</button>
-    </div>
-    <div class="lista">
-        <h2>Listagem</h2>
+	<h1 class="titulo">SENA-ENFER</h1>
+	
 
-        <label for="dados">Dados:</label>
-        <select id="dados" name="dados">
-            <option value="pacientes">Pacientes</option>
-            <option value="consultas">Consultas</option>
-        </select><br>
+	<div id="container-paciente-consulta">
 
-        <button class="listar" onclick="listagem()">Listar</button>
-    </div>
+		{{!-- Pacientes --}}
+		<div class="lista">
+			<h2>Pacientes</h2>
 
-    <div class="verificar">
-  <h2>Verificar Saúde</h2>
-  <div class="verificar-grid">
-    <div class="card quadrado">
-      <h3>IMC</h3>
-      <label>Peso (kg): <input type="number" id="peso"></label>
-      <label>Altura (m): <input type="number" step="0.01" id="altura"></label>
-      <p id="resultado-imc">--</p>
-    </div>
+			<h5>Quantidade: {{pacientes}}</h5>
+			<button onclick="cadastrarPaciente()" class="cadastrar">Cadastrar Paciente</button>
+			<br><br>
+			<button class="cadastrar" id="listar-p" onclick="listarPaciente()">Listar Pacientes</button>
+		</div>
 
-    <div class="card quadrado">
-      <h3>Pressão</h3>
-      <label>Sistólica: <input type="number" id="sistolica"></label>
-      <label>Diastólica: <input type="number" id="diastolica"></label>
-      <p id="resultado-pressao">--</p>
-    </div>
+		{{!-- Consutlas --}}
+		<div class="lista">
+			<h2>Consultas</h2>
+			<h5>Quantidade: {{consultas}}</h5>
+			<button class="cadastrar" onclick="formTriagem()">Iniciar Consulta</button>
+			<br><br>
+			<button class="cadastrar" onclick="listarConsulta()">Listar Consultas</button>
+		</div>
+	</div>
+	
 
-    <div class="card quadrado">
-      <h3>Glicemia</h3>
-      <label>Valor (mg/dL): <input type="number" id="glicemia"></label>
-      <p id="resultado-glicemia">--</p>
-    </div>
-  </div>
-</div>
+	<div class="verificar">
+		<h2>Verificar Saúde</h2>
+		<div class="verificar-grid">
+		<div class="card quadrado">
+		<h3>IMC</h3>
+		<label>Peso (kg): <input type="number" id="peso"></label>
+		<label>Altura (m): <input type="number" step="0.01" id="altura"></label>
+		<p id="resultado-imc">--</p>
+		</div>
 
-        
+		<div class="card quadrado">
+		<h3>Pressão</h3>
+		<label>Sistólica: <input type="number" id="sistolica"></label>
+		<label>Diastólica: <input type="number" id="diastolica"></label>
+		<p id="resultado-pressao">--</p>
+		</div>
+			<div class="card quadrado">
+				<h3>Glicemia</h3>
+				<label>Valor (mg/dL): <input type="number" id="glicemia"></label>
+				<p id="resultado-glicemia">--</p>
+			</div>
+		</div>
+	</div>
+
 </div>

@@ -8,7 +8,7 @@ body {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -104,7 +104,7 @@ select {
 }
 
 .verificar {
-    margin-top: 60px;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -204,10 +204,10 @@ option{
   border-radius: 12px;
   padding: 20px;
   width: 280px;   
-  height: 300px;  
+  height: auto;  
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
-
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -237,4 +237,29 @@ option{
   font-weight: bold;
   font-size: 15px;
   color: #333;
+}
+
+
+#container-paciente-consulta{
+  top: 50%;
+  left: 50%;
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  height: 330px;
+  
+}
+
+h5{
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+
+#listar-p{
+  width: 180px;
 }
