@@ -67,7 +67,7 @@ body {
 }
 
 .paciente-card {
-  background-color: #659dda; 
+  background-color: #73b0ff; 
   color: #000;
   border: 1px solid #b3d9ff;
   padding: 20px;
@@ -198,4 +198,21 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.container-pacientes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.container-pacientes:has(.paciente-card:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.container-pacientes:has(.paciente-card:only-child) .paciente-card {
+  grid-column: span 2; 
 }
