@@ -6,7 +6,7 @@ class Paciente{
     // rota get listar
     async lista(req,res){
         try {
-            const pacientes = await modelPaciente.findAll()
+            const pacientes = await modelPaciente.findAll({order:[['createdAt','DESC']]})
             return res.render('paciente/listagem-pacientes',{
                 script:'paciente/listagem-pacientes.js',
                 stylesheet:'paciente/listagem-pacientes.css',
