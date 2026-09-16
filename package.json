@@ -1,5 +1,5 @@
 {
-  "name": "projeto-podacao",
+  "name": "projeto-hackaton",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedrolucasods/Projeto-PodAcao.git"
+    "url": "git+https://github.com/pedrolucasods/projeto-hackaton.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pedrolucasods/Projeto-PodAcao/issues"
+    "url": "https://github.com/pedrolucasods/projeto-hackaton/issues"
   },
-  "homepage": "https://github.com/pedrolucasods/Projeto-PodAcao#readme",
+  "homepage": "https://github.com/pedrolucasods/projeto-hackaton#readme",
   "dependencies": {
     "body-parser": "^2.2.2",
     "dotenv": "^17.2.3",
