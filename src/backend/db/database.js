@@ -1,15 +1,18 @@
 const Sequelize = require('sequelize')
 const path = require('path')
-const { logger } = require('sequelize/lib/utils/logger')
-require('dotenv').config()
+
+require('dotenv').config({
+    path: path.resolve(__dirname, '../../../.env')
+})
+
 const db = new Sequelize(
-    'sistema_enfermagem',
-    'root',
-    'VoucherDev@2024',
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
     {
-        host: 'localhost',
-        port: 3306,
-        dialect: 'mysql',
+        host: process.env.DB_HOST,
+        port: Number(process.env.DB_PORT),
+        dialect: process.env.DB_DIALECT,
         logging: false
     }
 )
